@@ -1,0 +1,15 @@
+D:\DnDScene\bin\Debug\net8.0\DnDScene.exe
+D:\DnDScene\bin\Debug\net8.0\DnDScene.deps.json
+D:\DnDScene\bin\Debug\net8.0\DnDScene.runtimeconfig.json
+D:\DnDScene\bin\Debug\net8.0\DnDScene.dll
+D:\DnDScene\bin\Debug\net8.0\DnDScene.pdb
+D:\DnDScene\obj\Debug\net8.0\DnDScene.GeneratedMSBuildEditorConfig.editorconfig
+D:\DnDScene\obj\Debug\net8.0\DnDScene.AssemblyInfoInputs.cache
+D:\DnDScene\obj\Debug\net8.0\DnDScene.AssemblyInfo.cs
+D:\DnDScene\obj\Debug\net8.0\DnDScene.csproj.CoreCompileInputs.cache
+D:\DnDScene\obj\Debug\net8.0\DnDScene.sourcelink.json
+D:\DnDScene\obj\Debug\net8.0\DnDScene.dll
+D:\DnDScene\obj\Debug\net8.0\refint\DnDScene.dll
+D:\DnDScene\obj\Debug\net8.0\DnDScene.pdb
+D:\DnDScene\obj\Debug\net8.0\DnDScene.genruntimeconfig.cache
+D:\DnDScene\obj\Debug\net8.0\ref\DnDScene.dll

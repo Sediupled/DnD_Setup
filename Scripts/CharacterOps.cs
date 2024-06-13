@@ -40,26 +40,34 @@ namespace VS_CODE
             {
                 Console.WriteLine("Name: ");
                 a.Name = Console.ReadLine();
+                Console.WriteLine("");
                 Console.WriteLine("HealthBar: ");
                 a.HealthBar = int.Parse(Console.ReadLine());
+                Console.WriteLine("");
                 Console.WriteLine("Race: ");
                 a.Race = Console.ReadLine();
+                Console.WriteLine("");
                 Console.WriteLine("subRace: ");
                 a.subRace = Console.ReadLine();
+                Console.WriteLine("");
                 Console.WriteLine("Race Description: ");
                 a.RaceDesc = Console.ReadLine();
+                Console.WriteLine("");
                 Console.WriteLine("Class: ");
                 a.CharClass = Console.ReadLine();
+                Console.WriteLine("");
                 Console.WriteLine("Wealth: ");
                 a.Wealth = int.Parse(Console.ReadLine());
+                Console.WriteLine("");
                 Console.WriteLine("Level: ");
                 a.Level = int.Parse(Console.ReadLine());
+                Console.WriteLine("");
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
+                CharacterSelectAtributes(a);
             }
-
 
 
         }

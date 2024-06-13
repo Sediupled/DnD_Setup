@@ -19,6 +19,7 @@ class DNDSETUP
     static void GameSetup(int players)
     {
         GetPlayerNames(players);
+        //RollDice();
     }
 
     static void GetPlayerNames(int players)
@@ -57,16 +58,39 @@ class DNDSETUP
 
     static void RollDice()
     {
-        //Input Dice number
-        //DiceRoll if 20,10,12,8,6,4 then do roll, notice dice = 2 + 2x(from 0-8)
-        //if not then ask again for currect dice
 
-        //show dice animation
-        //show picture on screen
+        Console.WriteLine("Which Dice would you like to roll?");
+        for (int i = 1; i < 10; i++)
+        {
+            int a = (2 + 2 * i);
+            Console.WriteLine(i + "=)" + a);
+        }
+        int selection = Convert.ToInt32(Console.ReadLine());
+        if (selection<1 || selection>9)
+        {
+            Console.WriteLine("Try Again, Value should be within limits of the Realm");
+            RollDice();
+
+
+        }
+        else
+        {
+            var rand = new Random();
+
+            int RealSelection = (2 * selection + 2);
+            Console.WriteLine("You Chose the D" + RealSelection + " Dice.");
+            Console.WriteLine("The Dice Shows: " + rand.Next(0, RealSelection));
+        }
+
+
+
+
+
+
     }
     static void MonsterGen()
     {
-        //Generates Monster with certain ability traits
+        //
     }
 
 
