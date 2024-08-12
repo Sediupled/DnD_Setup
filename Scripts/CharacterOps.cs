@@ -38,28 +38,28 @@ namespace VS_CODE
             try
             {
                 Console.WriteLine("Name: ");
-                a.Name = Console.ReadLine();
+                a.Name = Console.ReadLine() ??("unset-Name");
                 Console.WriteLine("");
                 Console.WriteLine("HealthBar: ");
-                a.HealthBar = int.Parse(Console.ReadLine());
+                a.HealthBar = int.Parse(Console.ReadLine()??("unset-Health"));
                 Console.WriteLine("");
                 Console.WriteLine("Race: ");
-                a.Race = Console.ReadLine();
+                a.Race = Console.ReadLine()??("unset-Race");
                 Console.WriteLine("");
                 Console.WriteLine("subRace: ");
-                a.subRace = Console.ReadLine();
+                a.subRace = Console.ReadLine()??("unset-SubRace");
                 Console.WriteLine("");
                 Console.WriteLine("Race Description: ");
-                a.RaceDesc = Console.ReadLine();
+                a.RaceDesc = Console.ReadLine()??("unset-Race Description");
                 Console.WriteLine("");
                 Console.WriteLine("Class: ");
-                a.CharClass = Console.ReadLine();
+                a.CharClass = Console.ReadLine()??("unset-Class");
                 Console.WriteLine("");
                 Console.WriteLine("Wealth: ");
-                a.Wealth = int.Parse(Console.ReadLine());
+                a.Wealth = int.Parse(Console.ReadLine()??("unset-Wealth"));
                 Console.WriteLine("");
                 Console.WriteLine("Level: ");
-                a.Level = int.Parse(Console.ReadLine());
+                a.Level = int.Parse(Console.ReadLine()??("unset-Level"));
                 Console.WriteLine("");
             }
             catch (Exception ex)

@@ -1,11 +1,12 @@
 public class Character
 {
-    public string Name = "";
-    public int HealthBar = 0;
-    public string Race = "";
-    public string subRace = "";
-    public string RaceDesc = "";
-    public string CharClass = "";
+    public string? Name {get; set;}   
+    public string? Race {get; set;}
+    public string? subRace {get; set;}
+    public string? RaceDesc {get; set;}
+    public string? CharClass {get; set;}
+
+    public int HealthBar;
     public int Wealth;
     public int Level;
 
