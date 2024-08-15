@@ -5,15 +5,15 @@ namespace VS_CODE
     public class CharacterOps
     {
 
-        public void isAlive(Character h)
+        public bool isAlive(Character h)
         {
             if (h.HealthBar == 0)
             {
-                Console.WriteLine(h.Name + " is dead.");
+                return false;
             }
             else
             {
-                Console.WriteLine(h.Name + " is alive on " + h.HealthBar + " hp.");
+                return true;
             }
         }
 
@@ -31,7 +31,7 @@ namespace VS_CODE
 
         }
 
-        public void CharacterSelectAtributes(Character a)
+        public void CharacterSelectAttributes(Character a)
         {
 
             Console.WriteLine("Select your traits:-");
@@ -65,7 +65,17 @@ namespace VS_CODE
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
-                CharacterSelectAtributes(a);
+                CharacterSelectAttributes(a);
+            }
+
+            if(CheckChosen(a) == false)
+            {
+
+                Console.WriteLine("Atleast fill in Major Traits!");
+
+                Console.WriteLine("Eg: (Name, Race, Class)");
+
+                CharacterSelectAttributes(a);
             }
 
 
