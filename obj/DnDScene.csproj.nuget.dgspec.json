@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\DnDScene\\DnDScene.csproj": {}
+    "D:\\DnDScene\\DnDScene.csproj": {}
   },
   "projects": {
-    "d:\\DnDScene\\DnDScene.csproj": {
+    "D:\\DnDScene\\DnDScene.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\DnDScene\\DnDScene.csproj",
+        "projectUniqueName": "D:\\DnDScene\\DnDScene.csproj",
         "projectName": "DnDScene",
-        "projectPath": "d:\\DnDScene\\DnDScene.csproj",
+        "projectPath": "D:\\DnDScene\\DnDScene.csproj",
         "packagesPath": "C:\\Users\\chait\\.nuget\\packages\\",
-        "outputPath": "d:\\DnDScene\\obj\\",
+        "outputPath": "D:\\DnDScene\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\chait\\AppData\\Roaming\\NuGet\\NuGet.Config"

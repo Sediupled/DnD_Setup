@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5Sjfa+/vBjrR+ngROxaRh1h+SBDOme4lNw1O8t1VW/BvDCO3XemV64FuDrAZHkZhPuvfpae1SInxZPDgKgq8VA==",
+  "dgSpecHash": "P4r1THLRa2f0R86eFw56amzBLFUS62KgZLmV1XTp5DXLeTIkCm2g8qnUgEZ2D/tltnT4NbjOdfbsx5XXlAyk4Q==",
   "success": true,
-  "projectFilePath": "d:\\DnDScene\\DnDScene.csproj",
+  "projectFilePath": "D:\\DnDScene\\DnDScene.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
