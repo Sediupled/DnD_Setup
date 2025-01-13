@@ -3,18 +3,27 @@ using VS_CODE;
 public class PaperLessDnDApp
 {
     DNDSETUP dnd;
-
+    (int Left, int Top) pos;
     public PaperLessDnDApp()
     {
-
+        showAscii();
         Console.WriteLine("My DND Setup");
         Console.Write("The Weight of your Crew: ");
         int playerAmt = int.Parse(Console.ReadLine());
         dnd = new DNDSETUP(playerAmt);
-        createCharacters();
-        DisplaySheet();
-        DisplayMenu();
+        init();
         Console.ReadLine();
+    }
+
+    void init()
+    {
+        createCharacters();
+        DisplayMenu();
+    }
+
+    void reScene() {
+        Console.Clear();
+        showAscii();
     }
 
     Character CharacterSelectAttributes()
@@ -22,34 +31,42 @@ public class PaperLessDnDApp
         Console.WriteLine("Select your traits:-");
         Console.WriteLine("Name Thyself: ");
         string playerName = Console.ReadLine();
+        reScene();
 
         Console.WriteLine("");
         Console.WriteLine("Name: ");
         string name = Console.ReadLine();
+        reScene();
 
         Console.WriteLine("");
         Console.WriteLine("HealthBar: ");
         int healthBar = int.Parse(Console.ReadLine() ?? ("unset-Health"));
+        reScene();
 
         Console.WriteLine("");
         Console.WriteLine("Race: ");
         string race = Console.ReadLine() ?? ("unset-Race");
+        reScene();
 
         Console.WriteLine("");
         Console.WriteLine("subRace: ");
         string subRace = Console.ReadLine() ?? ("unset-SubRace");
+        reScene();
 
         Console.WriteLine("");
         Console.WriteLine("Class: ");
         string charClass = Console.ReadLine() ?? ("unset-Class");
+        reScene();
 
         Console.WriteLine("");
         Console.WriteLine("Wealth: ");
         int wealth = int.Parse(Console.ReadLine() ?? ("unset-Wealth"));
+        reScene();
 
         Console.WriteLine("");
         Console.WriteLine("Level: ");
         int level = int.Parse(Console.ReadLine() ?? ("unset-Level"));
+        reScene();
         Console.WriteLine("");
 
         return new Character(playerName, name, race, subRace, charClass, healthBar, wealth, level);
@@ -57,7 +74,7 @@ public class PaperLessDnDApp
 
     void createCharacters()
     {
-        for (int i = 0; i < dnd.getPlayerAmount(); i++) //picking character attributes
+        for (int i = 0; i < dnd.getPlayerAmount(); i++)
         {
             Character[] players = dnd.getPlayers();
             players[i] = CharacterSelectAttributes();
@@ -83,35 +100,25 @@ public class PaperLessDnDApp
             Console.WriteLine(a[i].getPlayerName() + "'s Experience in this Realm is " + a[i].getLevel());
         }
         Console.WriteLine("//===========END OF SHEET===========//");
+        Console.WriteLine();
+        pos = Console.GetCursorPosition();
 
     }
 
     void DisplayMenu()
     {
-
+        reScene();
+        DisplaySheet();
         int selection = 0;
-
         Console.WriteLine();
-        Console.WriteLine();
-        Console.WriteLine();
-
         Console.WriteLine("//===============M-E-N-U===============//");
-
         Console.WriteLine();
         Console.WriteLine();
-
         Console.WriteLine("Choose your Option: ");
-
         Console.Write("1) Roll Dice      ");
-
         Console.Write("2) Generate Monster      ");
-
         Console.Write("3) Who's in Party?      ");
-
         Console.Write("4) Show Character Sheet      ");
-
-        Console.WriteLine();
-        Console.WriteLine();
         Console.WriteLine();
         Console.WriteLine();
 
@@ -124,9 +131,9 @@ public class PaperLessDnDApp
         catch (Exception e)
         {
             Console.WriteLine($"Try again {e.Message}");
-
             DisplayMenu();
         }
+        reScene();
 
         MenuSelector(selection);
 
@@ -137,15 +144,26 @@ public class PaperLessDnDApp
         Console.WriteLine("Press any key to move on");
 
         Console.ReadKey();
+        //Console.Clear();
 
         DisplayMenu();
 
+    }
+    void showAscii()
+    {
+        TextReader tr = new StreamReader(@"D:\DnDScene\AsciiArt.txt");
+
+        string readtr = tr.ReadLine();
+        while (readtr != null)
+        {
+            Console.WriteLine(readtr);
+            readtr = tr.ReadLine();
+        }
     }
 
 
     void MenuSelector(int selection)
     {
-
         switch (selection)
         {
 
