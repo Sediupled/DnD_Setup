@@ -3,7 +3,6 @@ using VS_CODE;
 public class PaperLessDnDApp
 {
     DNDSETUP dnd;
-    (int Left, int Top) pos;
     public PaperLessDnDApp()
     {
         showAscii();
@@ -83,7 +82,6 @@ public class PaperLessDnDApp
 
     void DisplaySheet()
     {
-
         Console.WriteLine("//===========THIS IS MY SHEET===========//");
         Console.WriteLine("");
         Character[] a = dnd.getPlayers();
@@ -101,7 +99,6 @@ public class PaperLessDnDApp
         }
         Console.WriteLine("//===========END OF SHEET===========//");
         Console.WriteLine();
-        pos = Console.GetCursorPosition();
 
     }
 
@@ -123,7 +120,6 @@ public class PaperLessDnDApp
         Console.WriteLine();
 
         Console.Write("Here: ");
-
         try
         {
             selection = Convert.ToInt32(Console.ReadLine());
